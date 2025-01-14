@@ -12,27 +12,17 @@ export function DownloadSection() {
           {/* Tab Navigation */}
           <div className="flex justify-center mb-8">
             <TabsList className="inline-flex h-10 items-center justify-center rounded-md bg-white p-1 text-muted-foreground border">
-              <TabsTrigger
-                value="customer"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-8 py-2 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-[#1e1b4b] data-[state=active]:text-white bg-white text-black hover:bg-gray-100"
-              >
+              <TabsTrigger value="customer" className="rounded-sm px-3">
                 Customer
               </TabsTrigger>
-              <TabsTrigger
-                value="vendor"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-8 py-2 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-[#1e1b4b] data-[state=active]:text-white bg-white text-black hover:bg-gray-100"
-              >
+              <TabsTrigger value="vendor" className="rounded-sm px-3">
                 Vendor
               </TabsTrigger>
-              <TabsTrigger
-                value="riders"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-8 py-2 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-[#1e1b4b] data-[state=active]:text-white bg-white text-black hover:bg-gray-100"
-              >
+              <TabsTrigger value="riders" className="rounded-sm px-3">
                 Riders
               </TabsTrigger>
             </TabsList>
           </div>
-
           {/* Content Section */}
           <div className="text-center mb-16">
             <p className="text-gray-600 text-lg mb-4">Experience seamless deliveries</p>
@@ -69,7 +59,7 @@ export function DownloadSection() {
 
           {/* Tab Content */}
           <TabsContent value="customer" className="">
-            <div className="relative mx-auto max-w-[1200px] bg-teal-500">
+            <div className="relative mx-auto max-w-[1200px]">
               <img
                 src="/customer.png"
                 alt="Customer Interface"

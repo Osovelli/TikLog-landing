@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ButtonComponent } from './ButtonComponent'
 import { useModal } from '@/lib/ModalContext'
-import { DeliveryDetails } from './_HomeOVerviewComponents/DeliveryDetails'
+import { DeliveryDetails } from './_HomeComponents/DeliveryDetails'
 import { WalletCard } from '@/icon/Icons'
 
 const vehicleTypes = [

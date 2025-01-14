@@ -11,7 +11,7 @@ import { Logo } from '@/icon/Icons'
 
 export default function AppHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const navItems = ["Contacts", "Terms Page", "About", "Services"]
+  const navItems = ["contact", "terms Page", "about", "services"]
 
   const SignUpDropdown = () => (
     <DropdownMenu>
@@ -72,10 +72,12 @@ export default function AppHeader() {
             {navItems.map((item, index) => (
               <a
                 key={index}
-                href="#"
+                href={`/${item}`}
                 className="text-sm font-medium text-black transition-colors hover:text-[#4154BE]"
               >
+                <p className='capitalize'>
                 {item}
+                </p>        
               </a>
             ))}
           </nav>
