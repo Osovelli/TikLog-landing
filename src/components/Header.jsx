@@ -11,12 +11,12 @@ import { Logo } from '@/icon/Icons'
 
 export default function AppHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const navItems = ["Nav Item 1", "Nav Item 2", "Nav Item 3", "Nav Item 4"]
+  const navItems = ["Contacts", "Terms Page", "About", "Services"]
 
   const SignUpDropdown = () => (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="bg-[#4154BE] text-white hover:bg-[#4154BE]/90 w-full md:w-auto">
+        <Button className="bg-[#1F1F76] text-white hover:bg-[#4154BE]/90 w-full md:w-auto">
           Sign Up / Login
         </Button>
       </DropdownMenuTrigger>
