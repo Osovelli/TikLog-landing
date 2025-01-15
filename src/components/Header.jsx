@@ -11,7 +11,7 @@ import { Logo } from '@/icon/Icons'
 
 export default function AppHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const navItems = ["contact", "terms Page", "about", "services"]
+  const navItems = ["contact", "terms", "about", "services"]
 
   const SignUpDropdown = () => (
     <DropdownMenu>

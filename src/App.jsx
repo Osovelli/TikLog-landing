@@ -1,6 +1,9 @@
 import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
-import { ContactPage } from './pages/Contact';
+import { ContactPage } from './pages/ContactPage';
+import { TermsPage } from './pages/TermsPage';
+import { AboutPage } from './pages/AboutPage';
+import { ServicesPage } from './pages/ServicesPage';
 
 
 
@@ -11,6 +14,9 @@ function App() {
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path='/contact' element={<ContactPage />} />
+                <Route path='/terms' element={<TermsPage />} />
+                <Route path='/about' element={<AboutPage />} />
+                <Route path='/services' element={<ServicesPage />} />
             </Routes>
         </BrowserRouter>
     )
