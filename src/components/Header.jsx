@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Store, User, Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import {
@@ -8,10 +8,23 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Logo } from '@/icon/Icons'
+import { useLocation } from 'react-router'
+import { Link } from 'react-router-dom'
 
 export default function AppHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const navItems = ["contact", "terms", "about", "services"]
+  const [activeItem, setActiveItem] = useState("")
+  const location = useLocation()
+  const navItems = ["about", "terms", "services", "contact"]
+
+  useEffect(() => {
+    const currentPath = location.pathname.substring(1) // Remove the leading slash
+    if (navItems.includes(currentPath)) {
+      setActiveItem(currentPath)
+    } else {
+      setActiveItem("") // Reset if on a non-nav page
+    }
+  }, [location])
 
   const SignUpDropdown = () => (
     <DropdownMenu>
@@ -63,22 +76,26 @@ export default function AppHeader() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <a href="/" className="mr-8">
+          <Link to="/" className="mr-8">
             <Logo />
-          </a>
+          </Link>
 
           {/* Navigation Items - Desktop */}
           <nav className="hidden md:flex flex-1 items-center space-x-8">
             {navItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href={`/${item}`}
-                className="text-sm font-medium text-black transition-colors hover:text-[#4154BE]"
+                to={`/${item}`}
+                onClick={() => setActiveItem(item)}
+                className={`text-sm font-medium  transition-colors hover:text-[#4154BE] ${
+                  activeItem === item ? 'text-[#4154BE] border-b-2 border-[#4154BE]' : 'text-black'
+                }`}
+                
               >
                 <p className='capitalize'>
                 {item}
                 </p>        
-              </a>
+              </Link>
             ))}
           </nav>
 
