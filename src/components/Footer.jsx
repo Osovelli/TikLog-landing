@@ -1,30 +1,47 @@
 import { Facebook, Instagram, Apple } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { FaApple, FaFacebook, FaGoogle, FaInstagram } from 'react-icons/fa'
+import { Link, useLocation } from 'react-router-dom'
 
 export function AppFooter() {
-  const navItems = ["Nav Item 1", "Nav Item 2", "Nav Item 3", "Nav Item 4", "Nav Item 5"]
+  const navItems = ["about us", "terms & condition", "privacy policy", "delivery policy"]
+  const [activeItem, setActiveItem] = useState("")
+  const location = useLocation()
   const currentYear = new Date().getFullYear()
+
+   useEffect(() => {
+      const currentPath = location.pathname.substring(1) // Remove the leading slash
+      const path = currentPath.replace(/-/g, " ")
+      
+      if (navItems.includes(path)) {
+        setActiveItem(path)
+      } else {
+        setActiveItem("") // Reset if on a non-nav page
+      }
+    }, [location])
 
   return (
     <footer className="w-full rounded-t-md p-4 bg-[#1F1F76] text-white h-[10%]">
       <div className="py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
           {/* Logo and Text */}
-          <div className="mb-6 md:mb-0">
+          <div className="mb-6 md:mb-0 mx-auto md:mx-0 text-center">
             <a href="/" className="text-2xl font-bold">TIKLOG</a>
             <p className="mt-2 text-gray-400">XXXXXXX</p>
           </div>
 
           {/* Navigation */}
-          <nav className="flex flex-wrap gap-6">
+          <nav className="flex flex-wrap gap-6 justify-center">
             {navItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href="#"
-                className="text-sm font-medium hover:text-[#4154BE] transition-colors"
+                to={`/${item}`.replace(/\s/g, "-")}
+                className={`text-sm font-medium hover:text-[#4154BE] transition-colors capitalize, ${
+                  activeItem === item ? 'text-[#7387fa] border-b-2 border-[#0e1333]' : 'text-white'
+                }`}
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

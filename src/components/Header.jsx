@@ -15,12 +15,14 @@ export default function AppHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeItem, setActiveItem] = useState("")
   const location = useLocation()
-  const navItems = ["about", "terms", "services", "contact"]
+  const navItems = ["about us", "terms & condition", "services", "contact"]
 
   useEffect(() => {
     const currentPath = location.pathname.substring(1) // Remove the leading slash
-    if (navItems.includes(currentPath)) {
-      setActiveItem(currentPath)
+    const path = currentPath.replace(/-/g, " ")
+    
+    if (navItems.includes(path)) {
+      setActiveItem(path)
     } else {
       setActiveItem("") // Reset if on a non-nav page
     }
@@ -85,7 +87,7 @@ export default function AppHeader() {
             {navItems.map((item, index) => (
               <Link
                 key={index}
-                to={`/${item}`}
+                to={`/${item}`.replace(/\s/g, "-")} // Replace spaces with hyphens
                 onClick={() => setActiveItem(item)}
                 className={`text-sm font-medium  transition-colors hover:text-[#4154BE] ${
                   activeItem === item ? 'text-[#4154BE] border-b-2 border-[#4154BE]' : 'text-black'
@@ -116,13 +118,16 @@ export default function AppHeader() {
         <div className="md:hidden bg-white border-t">
           <nav className="flex flex-col p-4 space-y-4">
             {navItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href="#"
-                className="text-sm font-medium text-black transition-colors hover:text-[#4154BE]"
+                to={`/${item}`.replace(/\s/g, "-")} // Replace spaces with hyphens
+                onClick={() => {setActiveItem(item)}}
+                className={`text-sm font-medium text-black transition-colors hover:text-[#4154BE], ${
+                  activeItem === item ? 'text-[#4154BE]  border-[#4154BE]' : 'text-black'
+                }`}
               >
                 {item}
-              </a>
+              </Link>
             ))}
             <SignUpDropdown />
           </nav>
