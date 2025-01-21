@@ -297,7 +297,7 @@ export const ServicesPage = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 mt-4 space-y-3">
             {/* Flexible Payment Options */}
-          <Card className="border rounded-2xl overflow-hidden max-w-md bg-[#F6F7F9]">
+          <Card className="border rounded-2xl hidden md:block overflow-hidden max-w-md bg-[#F6F7F9]">
             <CardContent className="px-6 pt-6 pb-0">
               <div className="w-12 h-12 bg-[#1e1b4b] rounded-lg flex items-center justify-center mb-4">
                 <CreditCard className="h-6 w-6 text-white" />
@@ -306,7 +306,7 @@ export const ServicesPage = () => {
               <p className="text-gray-600 mb-6">
                 Choose from a range of payment options that suit your needs—credit cards, mobile wallets, or online transfers—all secure and fast.
               </p>
-              <div className="rounded-xl -mx-6">
+              <div className="rounded-xl -mx-6 mt-16">
                 <img src="/colors.png"/>
               </div>
             </CardContent>

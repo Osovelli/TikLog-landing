@@ -1,39 +1,36 @@
-import { useEffect, useState } from 'react'
-import { Store, User, Menu, X } from 'lucide-react'
+import { useState, useEffect, useCallback } from "react"
+import { useLocation, Link } from "react-router-dom"
+import { Store, User, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Logo } from '@/icon/Icons'
-import { useLocation } from 'react-router'
-import { Link } from 'react-router-dom'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { Logo } from "@/icon/Icons"
 
 export default function AppHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeItem, setActiveItem] = useState("")
   const location = useLocation()
-  const navItems = ["about us", "terms & condition", "services", "contact"]
+  const navItems = ["about us", "services", "contact"]
 
   useEffect(() => {
     const currentPath = location.pathname.substring(1) // Remove the leading slash
     const path = currentPath.replace(/-/g, " ")
-    
+
     if (navItems.includes(path)) {
       setActiveItem(path)
     } else {
       setActiveItem("") // Reset if on a non-nav page
     }
-  }, [location])
+  }, [location, navItems])
+
+  const handleNavItemClick = useCallback((item) => {
+    setActiveItem(item)
+    setIsMobileMenuOpen(false)
+  }, [])
 
   const SignUpDropdown = () => (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="bg-[#1F1F76] text-white hover:bg-[#4154BE]/90 w-full md:w-auto">
-          Sign Up / Login
-        </Button>
+        <Button className="bg-[#1F1F76] text-white hover:bg-[#4154BE]/90 w-full md:w-auto">Sign Up / Login</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-[350px] p-4" align="end">
         <DropdownMenuItem className="flex flex-col items-start p-2 focus:bg-slate-100 cursor-pointer">
@@ -87,16 +84,13 @@ export default function AppHeader() {
             {navItems.map((item, index) => (
               <Link
                 key={index}
-                to={`/${item}`.replace(/\s/g, "-")} // Replace spaces with hyphens
-                onClick={() => setActiveItem(item)}
-                className={`text-sm font-medium  transition-colors hover:text-[#4154BE] ${
-                  activeItem === item ? 'text-[#4154BE] border-b-2 border-[#4154BE]' : 'text-black'
+                to={`/${item}`.replace(/\s/g, "-")}
+                onClick={() => handleNavItemClick(item)}
+                className={`text-sm font-medium transition-colors hover:text-[#4154BE] ${
+                  activeItem === item ? "text-[#4154BE] border-b-2 border-[#4154BE]" : "text-black"
                 }`}
-                
               >
-                <p className='capitalize'>
-                {item}
-                </p>        
+                <p className="capitalize">{item}</p>
               </Link>
             ))}
           </nav>
@@ -120,13 +114,13 @@ export default function AppHeader() {
             {navItems.map((item, index) => (
               <Link
                 key={index}
-                to={`/${item}`.replace(/\s/g, "-")} // Replace spaces with hyphens
-                onClick={() => {setActiveItem(item)}}
-                className={`text-sm font-medium text-black transition-colors hover:text-[#4154BE], ${
-                  activeItem === item ? 'text-[#4154BE]  border-[#4154BE]' : 'text-black'
+                to={`/${item}`.replace(/\s/g, "-")}
+                onClick={() => handleNavItemClick(item)}
+                className={`text-sm font-medium transition-colors hover:text-[#4154BE] ${
+                  activeItem === item ? "text-[#4154BE] font-semibold" : "text-black"
                 }`}
               >
-                {item}
+                <p className="capitalize">{item}</p>
               </Link>
             ))}
             <SignUpDropdown />
