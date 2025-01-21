@@ -36,7 +36,7 @@ export function AppFooter() {
               <Link
                 key={index}
                 to={`/${item}`.replace(/\s/g, "-")}
-                className={`text-sm font-medium hover:text-[#4154BE] transition-colors capitalize, ${
+                className={`text-sm capitalize font-medium hover:text-[#4154BE] transition-colors, ${
                   activeItem === item ? 'text-[#7387fa] border-b-2 border-[#0e1333]' : 'text-white'
                 }`}
               >
