@@ -4,6 +4,8 @@ import { ContactPage } from './pages/ContactPage';
 import { TermsPage } from './pages/TermsPage';
 import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
+import PrivacyPage from './pages/PrivacyPage';
+import DeliveryPolicyPage from './pages/DeliveryPolicy';
 
 
 
@@ -17,6 +19,8 @@ function App() {
                 <Route path='/terms-&-condition' element={<TermsPage />} />
                 <Route path='/about-us' element={<AboutPage />} />
                 <Route path='/services' element={<ServicesPage />} />
+                <Route path='/privacy-policy' element={<PrivacyPage />} />
+                <Route path='/delivery-policy' element={<DeliveryPolicyPage />} />
             </Routes>
         </BrowserRouter>
     )
