@@ -28,7 +28,7 @@ export function FeaturesSection() {
               <p className="text-gray-600 mb-6">
                 Know exactly where your delivery is, from pick-up to drop-off. With our real-time tracking, you can monitor progress and stay updated at every step.
               </p>
-              <div className="rounded-xl overflow-hidden p-0 m-0 bg-[#6887c5]">
+              <div className="rounded-xl overflow-hidden p-0 m-0">
                 <img
                   src="/Iphone 14 pic.png"
                   alt="Real-time tracking interface"
@@ -86,7 +86,7 @@ export function FeaturesSection() {
             </CardContent>
           </Card>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 mt-4">
             {/* Flexible Payment Options */}
           <Card className="border rounded-2xl overflow-hidden max-w-md bg-[#F6F7F9]">
             <CardContent className="px-6 pt-6 pb-0">
