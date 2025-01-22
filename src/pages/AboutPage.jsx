@@ -2,6 +2,7 @@ import React from 'react';
 import { Check } from 'lucide-react';
 import { Layout } from '@/components/Layout';
 import { DownloadSection } from '@/components/_AboutComponent/DownloadSection';
+import SEO from '@/components/SEO';
 
 export const AboutPage = () => {
   const coreValues = [
@@ -13,6 +14,12 @@ export const AboutPage = () => {
 
   return (
     <Layout>
+      <SEO
+        title="About | Tiklog.ng"
+        description="Learn about Tiklog's amazing services and products."
+        name="Tiklog.ng"
+        type="website"
+      />
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Hero Section */}
       <div className="mb-24">
