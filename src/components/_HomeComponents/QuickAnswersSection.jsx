@@ -21,11 +21,12 @@ export function QuickAnswersSection() {
               <span className="text-sm font-medium mb-4 block">Vendors</span>
               
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Get Quick Answers Instantly
+                Streamline Your Deliveries
               </h2>
               
               <p className="text-gray-600 mb-8 text-wrap">
-                An all-in-one customer service platform that helps you balance everything your customers need to be happy.
+                Tiklog provides an all-in-one logistics platform that helps you manage orders, track deliveries, and
+                keep your customers informed in real-time.
               </p>
 
               <div className="space-y-6 mb-8">
@@ -34,7 +35,7 @@ export function QuickAnswersSection() {
                     <Check className="w-4 h-4 text-[#1F1F76]" />
                   </div>
                   <p className="text-gray-600 text-wrap">
-                    Benefit 1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis turpis e
+                    Easy order management: Accept and process orders quickly through our intuitive dashboard.
                   </p>
                 </div>
 
@@ -43,7 +44,7 @@ export function QuickAnswersSection() {
                     <Check className="w-4 h-4 text-[#1F1F76]" />
                   </div>
                   <p className="text-gray-600 text-wrap">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Real-time tracking: Monitor your deliveries in real-time and provide updates to your customers.
                   </p>
                 </div>
 
@@ -52,13 +53,14 @@ export function QuickAnswersSection() {
                     <Check className="w-4 h-4 text-[#1F1F76]" />
                   </div>
                   <p className="text-gray-600 text-wrap">
-                    consectetur dui ultricies, and can be this long if needed.
+                    Flexible pricing: Choose from various delivery options to balance speed and cost for your business
+                    needs.
                   </p>
                 </div>
               </div>
 
               <Button className="bg-[#1e1b4b] hover:bg-[#1e1b4b]/90 text-white">
-                Get Started
+                Join as a Vendor
               </Button>
             </div>
           </div>

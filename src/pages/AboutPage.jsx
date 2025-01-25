@@ -6,11 +6,11 @@ import SEO from '@/components/SEO';
 
 export const AboutPage = () => {
   const coreValues = [
-    "Core value 1",
-    "Core value 2",
-    "Core value 3",
-    "Core value 4"
-  ];
+    "Customer-Centric Excellence",
+    "Reliable & Timely Delivery",
+    "Innovation & Technology",
+    "Trust & Transparency",
+  ]
 
   return (
     <Layout>
@@ -26,13 +26,15 @@ export const AboutPage = () => {
         <p className="text-indigo-600 font-medium mb-4">Nice to meet you</p>
         <div className='flex flex-col md:flex-row  justify-center'>
           <h1 className="text-5xl font-bold mb-8 max-w-2xl">
-            Our mission is to <span className="text-indigo-600">Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit.
+            Our mission is to <span className="text-indigo-600">revolutionize logistics in Africa</span>, making
+            deliveries seamless and efficient.
           </h1>
-          <p className="text-gray-600 max-w-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis turpis eu dui ultricies, vel interdum nunc varius. 
-            Sed ut purus et odio vehicula vestibulum sit amet quis urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Ut convallis turpis eu dui ultricies, vel interdum nunc varius. Sed ut purus et odio vehicula
-          </p>
+            <p className="text-gray-600 max-w-2xl md:px-6">
+              At Tiklog, we're committed to transforming the logistics landscape by leveraging technology to connect
+              businesses, customers, and delivery partners. We believe in creating a platform that not only simplifies
+              deliveries but also empowers local businesses and creates opportunities for riders while ensuring customer
+              satisfaction remains at the heart of everything we do.
+            </p>
         </div>
         </div>
 
@@ -41,8 +43,9 @@ export const AboutPage = () => {
         <div className="bg-gray-50 p-12 rounded-2xl">
           <h2 className="text-3xl font-bold mb-6">Core Values</h2>
           <p className="text-gray-600 mb-8">
-            Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.
-          </p>
+              Our values shape every decision we make and every service we provide. They're the foundation of our
+              commitment to excellence in logistics and customer service.
+            </p>
           <ul className="space-y-4">
             {coreValues.map((value, index) => (
               <li key={index} className="flex items-center gap-3">
@@ -54,46 +57,56 @@ export const AboutPage = () => {
             ))}
           </ul>
         </div>
-        <div className='bg-gray-200 rounded-2xl w-72 md:h-82 p-6'>
-        <img src='/IPhone 13 Pro Max.png' className="object-cover " /> {/* Placeholder for image */}
+        <div className='bg-gray-200 rounded-2xl w-full flex justify-center md:h-82 p-6 mx-auto'>
+        <img src='/IPhone 13 Pro Max.png' className="object-cover w-72 " /> {/* Placeholder for image */}
         </div>
       </div>
 
-      {/* Brief History Section */}
-      <div>
-        <p className="text-indigo-600 font-medium mb-4">Brief History</p>
-        <h2 className="text-4xl font-bold mb-6">Lorem ipsum dolor sit amet</h2>
-        <p className="text-gray-600 mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      
+        {/* Brief History Section */}
+        <div>
+          <p className="text-indigo-600 font-medium mb-4">Brief History</p>
+          <h2 className="text-4xl font-bold mb-6">Our Journey to Transform Logistics</h2>
+          <p className="text-gray-600 mb-12">From a simple idea to a comprehensive logistics solution</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-6 text-gray-600">
-            <p>
-              Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam.
-            </p>
-            <p>
-              Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.
-            </p>
-            <p>
-              Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit erat nam nibh orci.
-            </p>
-          </div>
-          <div className="space-y-6">
-            <div className="text-gray-600">
-              <p className="mb-8">
-                Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis sit lorem nunc nisi sit. Eget diam curabitur mi ac. Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam dui eget fringilla tincidunt. Arcu sit dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate hac elementum gravida cursus dis.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="space-y-6 text-gray-600">
+              <p>
+                Founded in 2023, Tiklog emerged from a vision to address the growing challenges in Nigeria's logistics
+                sector. We recognized the need for a more efficient, transparent, and technology-driven approach to
+                deliveries.
               </p>
-              <ul className="list-disc pl-6 space-y-4">
-                <li>Lectus id duis vitae porttitor enim gravida morbi.</li>
-                <li>Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.</li>
-                <li>Suspendisse maecenas ac donec scelerisque diam sed est duis purus.</li>
-              </ul>
+              <p>
+                Our platform started with a simple mission: to connect local businesses with reliable delivery partners.
+                As we grew, we expanded our services to include real-time tracking, instant pricing, and a robust
+                network of verified riders, making deliveries more accessible and reliable than ever before.
+              </p>
+              <p>
+                Today, Tiklog has evolved into a comprehensive logistics platform that serves thousands of customers,
+                businesses, and delivery partners across Nigeria. Our commitment to innovation and customer satisfaction
+                continues to drive our growth and development.
+              </p>
             </div>
-            <p className="text-gray-600">
-              Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor.
-            </p>
+            <div className="space-y-6">
+              <div className="text-gray-600">
+                <p className="mb-8">
+                  What sets Tiklog apart is our dedication to creating value for all stakeholders in the logistics
+                  ecosystem. We've built a platform that not only solves delivery challenges but also creates
+                  opportunities for economic growth and employment.
+                </p>
+                <ul className="list-disc pl-6 space-y-4">
+                  <li>Empowering local businesses with efficient delivery solutions</li>
+                  <li>Creating flexible earning opportunities for delivery partners</li>
+                  <li>Ensuring transparent and reliable service for all customers</li>
+                </ul>
+              </div>
+              <p className="text-gray-600">
+                As we look to the future, our goal remains clear: to continue innovating and expanding our services
+                while maintaining our commitment to excellence in logistics and customer satisfaction.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
       {/*Download Section */}
       <DownloadSection />
@@ -101,3 +114,5 @@ export const AboutPage = () => {
     </Layout>
   );
 }
+
+

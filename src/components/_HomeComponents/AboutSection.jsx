@@ -26,9 +26,10 @@ export function AboutSection() {
           {/* Right Column - Content */}
           <div className="space-y-12">
             {/* Main Description */}
-            <div className="bg-[#F6F8FA] rounded-2xl  p-6 shadow-sm border border-gray-100">
-              <p className="text-4xl font-normal track letter-spacing-[-1px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis turpis eu dui ultricies
+            <div className="bg-[#F6F8FA] rounded-2xl p-6 shadow-sm border border-gray-100">
+              <p className="text-4xl font-normal tracking-tight leading-tight">
+                Tiklog is transforming the logistics landscape in Africa by connecting businesses, customers, and
+                delivery partners through innovative technology.
               </p>
             </div>
 
@@ -43,7 +44,9 @@ export function AboutSection() {
                   <div className="space-y-2">
                     <h3 className="text-xl font-semibold">Our Mission</h3>
                     <p className="text-gray-600 text-sm">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis turpis eu dui ultricies, vel interdum nunc varius. Sed ut purus et odio vehicula vestibulum sit amet quis urna.
+                      To provide fast, reliable, and cost-effective delivery solutions that empower businesses and
+                      delight customers. We aim to create opportunities for our delivery partners and drive economic
+                      growth in the communities we serve.
                     </p>
                   </div>
                 </div>
@@ -76,7 +79,9 @@ export function AboutSection() {
                   <div className="space-y-2">
                     <h3 className="text-xl font-semibold">Our company vision.</h3>
                     <p className="text-gray-600 text-sm">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis turpis eu dui ultricies, vel interdum nunc varius. Sed ut purus et odio vehicula vestibulum sit amet quis urna.
+                      To be the leading logistics platform in Africa, known for our innovative technology, exceptional
+                      service, and positive impact on local economies. We envision a future where every business,
+                      regardless of size, has access to world-class delivery solutions.
                     </p>
                   </div>
                 </div>

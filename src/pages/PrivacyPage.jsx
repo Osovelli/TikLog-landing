@@ -7,27 +7,15 @@ export default function PrivacyPage() {
     <Layout className="min-h-screen bg-gray-50">
 
       {/* Content Section */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
 
           <div className="prose prose-lg max-w-none">
-            <p className="mb-6">
-              Having followed your brand and admired your specific aspect of your business or achievements, I believe
-              there is great potential for a joint marketing campaign that could mutually benefit both our companies and
-              capture the attention of our target audiences.
-            </p>
-
-            <p className="mb-6">
-              At Tiklog, we specialize in SaaS design and development. With our expertise, we have successfully executed
-              impactful marketing campaigns that have garnered significant attention and generated impressive results
-              for our clients.
-            </p>
-
-            <p className="mb-6">
-              I envision a collaborative marketing campaign that combines the strengths and unique offerings of both our
-              businesses. By leveraging our collective resources, creativity, and networks, we can create a compelling
-              campaign that not only boosts brand awareness but also drives engagement and conversions for both of us.
+          <p className="mb-6">
+              At Tiklog, we are committed to protecting your privacy and ensuring the security of your personal
+              information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you
+              use our logistics and delivery services.
             </p>
 
             {/* Additional Privacy Policy Sections */}
@@ -78,4 +66,6 @@ export default function PrivacyPage() {
     </Layout>
   )
 }
+
+
 
